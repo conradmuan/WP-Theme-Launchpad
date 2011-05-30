@@ -1,0 +1,12 @@
+WP-Theme-Launchpad is a collection of template files to help other developers in writing their own WordPress themes. It takes care of the basic code so you don't have to rewrite the same things over and over again (things like loops).
+
+It makes the following assumptions:
+- One sidebar and one menu wrapped in an init function
+- Post thumbnails
+- jQuery reregistered under Google CDN and enqueued
+
+WP Theme Launchpad also makes the following assumptions regarding CSS:
+- Packaged 960.css framework (if you need it. It is not linked by default)
+- Links a reset.css and a text.css, also from the 960.css framework
+- A wp-classes.css file contains default WordPress classes
+- A menu navigation comes pre-styled as a dropdown
