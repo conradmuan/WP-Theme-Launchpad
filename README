@@ -1,4 +1,8 @@
-WP-Theme-Launchpad is a collection of template files to help other developers in writing their own WordPress themes. It takes care of the basic code so you don't have to rewrite the same things over and over again (things like loops).
+After writing dozens of WordPress themes from scratch, I wrote WP-Theme-Launchpad as a collection of template files and a functions.php file to help me write WordPress themes faster.
+
+This was originally written to help me out but after reading a thread on www.reddit.com/r/Wordpress, I was inspired to release this library to help out other developers in learning what the common WordPress functions do or to help developers in writing WordPress themes from scratch faster.
+
+It takes care of the basic code and template files so you don't have to rewrite the same things over and over again (things like loops).
 
 This is NOT a theme. It is just a library of template files that developers will most likely need when creating their own WordPress theme.
 
