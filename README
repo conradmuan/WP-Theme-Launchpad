@@ -1,3 +1,5 @@
+Now on HTML5Boilerplate
+
 After writing dozens of WordPress themes from scratch, I wrote WP-Theme-Launchpad as a collection of template files and a functions.php file to help me write WordPress themes faster.
 
 This was originally written to help me out but after reading a thread on www.reddit.com/r/Wordpress, I was inspired to release this library to help out other developers in learning what the common WordPress functions do or to help developers in writing WordPress themes from scratch faster.
@@ -6,6 +8,12 @@ It takes care of the basic code and template files so you don't have to rewrite 
 
 This is NOT a theme. It is just a library of template files that developers will most likely need when creating their own WordPress theme.
 
+In Version 2.0
+- now using HTML5Boileplate, http://www.html5boilerplate.com
+- enqueues html5boilerplate's modernizr script and js folder structure
+- category and tag template pages are now just in archive.php
+
+Since version 1.0
 It makes the following assumptions:
 - One sidebar and one menu wrapped in an init function
 - Post thumbnails

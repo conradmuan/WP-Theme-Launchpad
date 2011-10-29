@@ -1,20 +1,65 @@
- <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+<?php
+/**
+ * Main Loop
+ *
+ * @author Conrad Muan <con.muan@gmail.com>
+ * @package Radical_Framework
+ * @subpackage templates
+ **/
+?>
+    <div id="main" role="main" class="grid_18 clearfix">
     
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <h2><a href="<?php the_permalink(); ?>" title="Link to <?php the_title(); ?>" alt="Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-            <span class="post-meta">Posted on <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></span>
+        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <header>
+                <h1 class="the-title"><a href="<?php the_permalink(); ?>" title="Link to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
+            </header>
             
-        <?php if (has_post_thumbnail()) : ?>
-            <div class="post-thumbnail">
-        <?php the_post_thumbnail(); ?>
-            </div><!-- post-thumbnail -->
-        <?php endif; ?> 
+            <section class="post-meta">
+                <div class="author-info clearfix">
+                    <div class="grid_3 alpha author-avatar">
+                        <?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+                    </div>
+                    
+                    <div class="grid_15 omega author-description">
+                        <h2><?php the_author(); ?></h2>
+                        <?php the_author_meta('description'); ?>
+                        <p>View all posts written by <?php the_author_posts_link(); ?></p>
+                    </div>
+                </div>
+                
+                <div class="posted-under">
+                    <p>Posted under: <?php the_category(); ?></p>
+                    <p><?php the_tags(); ?></p>
+                    <?php edit_post_link('Edit this post'); ?>
+                </div>  
+            </section>
+            
+            <?php if (has_post_thumbnail()) {
+                the_post_thumbnail();
+            }?>
             
             <?php the_content(); ?>
-        </div><!-- #post-<?php the_ID(); ?>-->
-    
-    <?php endwhile; ?>
-    
+            
+            <?php if(have_comments()): ?>
+            
+            <footer>
+                
+                <?php if (comments_open()) : ?>
+                
+                <a href="<?php comments_link(); ?>" title="Link to <?php the_title();?>'s Comments"><?php comments_number('No responses' , 'One response', '% responses'); ?></a>
+                
+                <?php endif; ?>
+                
+            </footer>
+            
+            <?php endif; ?>
+            
+        </article>
+        
+        <?php endwhile; ?>
+        
         <?php if ($wp_query->max_num_pages > 1) : ?>
         
         <div class="navigation clearfix">
@@ -23,13 +68,13 @@
         </div><!-- navigation -->
         
         <?php endif; ?>
+        
+        <?php else: ?>
+        
+        <article <?php post_class(); ?>>
+            <h1>404 Goes here</h1>
+        </article>
+        
+        <?php endif; ?>
     
-<?php else: ?>
-        
-        <div class="post clearfix">
-            <h1>404 Error</h1>
-            <p>No posts were found.</p>
-            <p><?php get_search_form(); ?></p>
-        </div>
-        
-<?php endif; ?>
+    </div><!--main-->

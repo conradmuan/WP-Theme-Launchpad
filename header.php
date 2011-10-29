@@ -1,26 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css" />
-<?php /**
-       * 960.css framework here in case you need a quick css framework
-       * More information http://www.960.gs/
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/960.css" />
-       */
+<?php
+/** Header template segment
+ *
+ * @author Conrad Muan <con.mun@gmail.com>
+ * @package Radical_Framework
+ * @subpackage templates
+ **/
 ?>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/text.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/wp-classes.css" />
-    <title><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title><?php bloginfo('name'); ?> | <?php bloginfo('description');?></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/boilerplate.css" />
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/960.css" />
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  <!-- end CSS-->
+
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div class="body-container clearfix">
-    <div>
-        <h1><a href="<?php bloginfo('url');; ?>" title="Link to <?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-        <p><?php bloginfo('description'); ?></p>
-        <?php wp_nav_menu( array('container_class'=>'menu-header clearfix' , 'theme_location'=>'header_navigation')); ?>
-    </div>
-<!-- header -->
+
+<header class="parent-header">
+    <div class="container_24 clearfix">
+        <div class="grid_9 logo">
+            <a href="<?php bloginfo('url'); ?>" id="logo"></a>
+        </div>
+        <div class="grid_15 tagline-container">
+            <h1 class="site-title"><a href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+            <p><?php bloginfo('description'); ?></p>
+        </div>
+        <div class="clear"></div>
+        <div class="header-menu grid_24 clearfix">
+          
+          <?php wp_nav_menu(array('theme_location'=>'header_menu', 'container'=>'nav'));?>
+          
+        </div><!--header-menu-->
+    </div>  
+</header>
+
+<div id="container" class="container_24 clearfix">

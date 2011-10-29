@@ -1,61 +1,165 @@
 /**
- * Theme Name: Radical Framework
+ * Theme Name: Radical Framework (in production)
  * Theme URI: http://www.radicalradical.com/
  * Description: This not really a theme. It's a starter that contains all the template files you will most likely need to help you get started on a theme of your own creation. This CSS file assumes that you need clears, and a CSS dropdown menu.
  * Author: Conrad Muan
  * Author URI: http://www.radicalradical.com/
- * Version: 1.0
+ * Version: 2.0
  **/
 
-/** Assumptions About Header Navigation **/
-.menu-header ul {
+/** Navigation when a Menu isn't assigned**/
+
+.menu ul,
+.menu ol {
+    padding:0;
     margin:0;
+    list-style:none;
 }
 
-.menu-header li {
+/** Nav **/
+.header-menu .menu {
+    float:left;
+    lefT:50%;
+    position:relative;
+    z-index:100;
+}
+
+.header-menu .menu a {
+    background:#ffffff;
+    display:block;
+    padding:5px;
+}
+
+.header-menu .menu a:hover {
+    background:#FFFBCC;
+}
+
+.header-menu .menu li {
     display:inline;
     float:left;
-    list-style:none;
-    margin:0;
+    position:relative;
+    right:50%;
 }
 
-.menu-header li a {
+.header-menu .menu li:hover > .sub-menu {
     display:block;
-    padding:5px 10px;
 }
 
-.menu-header li:hover > a{
-    background:#cccccc;
-}
-
-.menu-header .sub-menu .sub-menu {
+.header-menu .sub-menu {
     position:absolute;
-    float:left;
-    left:100%;
     width:100%;
-    top:0;
 }
 
-.menu-header li:hover > .sub-menu {
-    display:block;
-    position:absolute;
-    z-index:9999;
+.header-menu .sub-menu li {
+    position:static;
 }
 
-.menu-header li:hover > .sub-menu a {
-    background:#cccccc;
-}
-
-.menu-header .sub-menu{
+.header-menu .sub-menu {
     display:none;
 }
 
-/** Assumptions about structure **/
-
-.body-container{
-    margin:0 auto;
-    width:960px;
+/** Sidebar **/
+.sidebar {
+    list-style:none;
+    padding:0;
+    margin:0;
 }
 
-/** Clears Taken from 960.css **/
-.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+/** pagination **/
+.navigation {
+    position:relative;
+    width:100%;
+}
+
+.navigation .nav-previous,
+.navigation .nav-next {
+    display:inline;
+    float:left;
+    position:relative;
+    width:50%;
+}
+.navigation .nav-next{
+    float:right;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+}

@@ -1,13 +1,16 @@
+<?php
+/** Template for single blog entry. Post type is post
+ *
+ * @author Conrad Muan <con.muan@gmail.com>
+ * @package Radical_Framework
+ * @subpackage templates
+ */
+?>
+
 <?php get_header(); ?>
 
-<!-- single -->
-<div class="body-content clearfix">
+<?php get_sidebar(); ?>
     
-<?php get_template_part('loop' , 'single'); ?>
-    
-</div>
+<?php get_template_part('loop','single'); ?>
 
-<div class="sidebar-container">
-    <?php get_sidebar(); ?>
-</div>
 <?php get_footer(); ?>
