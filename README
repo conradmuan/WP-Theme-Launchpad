@@ -12,6 +12,7 @@ In Version 2.0
 - now using HTML5Boileplate, http://www.html5boilerplate.com
 - enqueues html5boilerplate's modernizr script and js folder structure
 - category and tag template pages are now just in archive.php
+- fixed a bug in functions.php
 
 Since version 1.0
 It makes the following assumptions:

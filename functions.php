@@ -87,7 +87,7 @@ function boilerplate_scripts(){
     
     // Register google cdn version of jquery
     wp_deregister_script('jquery');
-    wp_register_script('jquery' , 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js';
+    wp_register_script('jquery' , 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');
     wp_enqueue_script('jquery');
     
     // Register Modernizr (html5 for older browsers)
