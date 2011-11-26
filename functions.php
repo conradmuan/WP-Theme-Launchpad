@@ -65,7 +65,7 @@ add_action('init' , 'launch_theme');
 function launch_theme(){
     register_sidebar(array(
         'name'=>'Sidebar',
-        'id' => 'sidebar-$i'
+        'id' => 'sidebar-1'
     ));
     register_nav_menus(array(
         'header_menu' => 'Header Navigation'
