@@ -7,6 +7,15 @@
  * Version: 2.0
  **/
 
+/** Debug
+Show grid when .container_12 has .show-grid 
+Only use the following rules in development environments
+**/
+
+.container_12.show-grid { background:url('img/12_col.gif') repeat-y; }
+.container_16.show-grid { background:url('img/16_col.gif') repeat-y; }
+.container_24.show-grid { background:url('img/24_col.gif') repeat-y; }
+
 /** Navigation when a Menu isn't assigned**/
 
 .menu ul,

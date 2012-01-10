@@ -8,7 +8,7 @@
  **/
 ?>
 
-    <aside class="grid_6">
+    <aside class="grid_3">
         <ul class="sidebar">
         <?php if (!dynamic_sidebar('sidebar-1')): ?>
         

@@ -29,8 +29,8 @@
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
     <div class="navigation clearfix">
-        <div class="nav-previous alpha grid_8"><?php next_comments_link('&larr; Older Comments'); ?></div>
-        <div class="nav-next omega grid_8"><?php previous_comments_link('Newer Comments &rarr;'); ?></div>
+        <div class="nav-previous alpha grid_4"><?php next_comments_link('&larr; Older Comments'); ?></div>
+        <div class="nav-next omega grid_4"><?php previous_comments_link('Newer Comments &rarr;'); ?></div>
     </div>
 
 <?php endif; // get_comment_pages_count ?>

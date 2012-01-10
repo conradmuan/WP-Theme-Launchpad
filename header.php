@@ -19,7 +19,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/boilerplate.css" />
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/960.css" />
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/960_12_col.css" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <!-- end CSS-->
 
@@ -29,16 +29,16 @@
 <body <?php body_class(); ?>>
 
 <header class="parent-header">
-    <div class="container_24 clearfix">
-        <div class="grid_9 logo">
+    <div class="container_12 clearfix">
+        <div class="grid_5 logo">
             <a href="<?php bloginfo('url'); ?>" id="logo"></a>
         </div>
-        <div class="grid_15 tagline-container">
+        <div class="grid_7 tagline-container">
             <h1 class="site-title"><a href="<?php bloginfo('url'); ?>" title="Link to <?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
             <p><?php bloginfo('description'); ?></p>
         </div>
         <div class="clear"></div>
-        <div class="header-menu grid_24 clearfix">
+        <div class="header-menu grid_12 clearfix">
           
           <?php wp_nav_menu(array('theme_location'=>'header_menu', 'container'=>'nav'));?>
           
@@ -46,4 +46,4 @@
     </div>  
 </header>
 
-<div id="container" class="container_24 clearfix">
+<div id="container" class="container_12 clearfix">

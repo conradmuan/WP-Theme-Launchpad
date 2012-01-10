@@ -7,7 +7,7 @@
  * @subpackage templates
  **/
 ?>
-    <div id="main" role="main" class="grid_18 clearfix">
+    <div id="main" role="main" class="grid_9 clearfix">
     
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         
@@ -18,11 +18,11 @@
             
             <section class="post-meta">
                 <div class="author-info clearfix">
-                    <div class="grid_3 alpha author-avatar">
+                    <div class="grid_2 alpha author-avatar">
                         <?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
                     </div>
                     
-                    <div class="grid_15 omega author-description">
+                    <div class="grid_7 omega author-description">
                         <h2><?php the_author(); ?></h2>
                         <?php the_author_meta('description'); ?>
                         <p>View all posts written by <?php the_author_posts_link(); ?></p>
@@ -59,7 +59,9 @@
         <?php endwhile; else: ?>
         
         <article <?php post_class(); ?>>
-            <h1>404 Goes here</h1>
+            <h1>404 - Not Found</h1>
+			<p>Unfortunately, the content you were looking for was not found. Try searching for it</p>
+			<?php get_search_form(); ?>
         </article>
         
         <?php endif; ?>

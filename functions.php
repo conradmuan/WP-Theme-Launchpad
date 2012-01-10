@@ -85,9 +85,6 @@ function boilerplate_scripts(){
     // Store template path for use in this method
     $template_path = get_template_directory_uri();
     
-    // Register google cdn version of jquery
-    wp_deregister_script('jquery');
-    wp_register_script('jquery' , 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');
     wp_enqueue_script('jquery');
     
     // Register Modernizr (html5 for older browsers)
